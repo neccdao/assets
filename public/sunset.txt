@@ -1,0 +1,23 @@
+--
+
+So right now, the problem is that even with a new mint and burn algo that keeps pool balanced according to their collateral profile, right now we're in mint debt.
+If the macro market goes down, we would need sufficient protocol fees or incur debt against the Treasury.
+This doesn't seem plausible right now.
+
+Right now to combat IL, the NDOL stakers are staking in a farm that gets 1% bond purchases via nNECC tokens.
+Due to the nature of inverse perps, if traders short and take profit + collateral asset price goes down, it leads to a bank run situation.
+
+This is due to a lack in a stability pool similar but not quite the same as Liquity.
+There's no sort of insurance fund or stability pool that burns NDOL to reduce collateral pool debt and keep the pool balanced.
+In theory in return they should get nNECC tokens to pay for the debt.
+
+While we believe this can be worked out, we need time and focus to do it.
+To protect everyone's collateral and interest in the meantime, we are proposing to sunset mainnet Necc for now and "revert" back to testnet. Time will also be spent to find more full-time contributors because as you've seen right now, it's not doable for one lead developer.
+For a version 2, there will be a discount for early contributors to give feedback and find bugs and have a trading competition as well as a rebrand and identity.
+
+The sunsetting process would look like this:
+Mints and burns are disabled for now + will allow time for traders to close their positions by within the next Friday 7th Noon UTC+0.
+
+Once enough traders have closed their positions, assets will be moved out of the Vault contract to a smart contract.
+The necc.io frontend page will be used to interact with a redeem page where users can redeem their NDOL and nNECC tokens at a redemption ratio of 0.4.
+A redemption event will be emitted on the smart contract so when the funds are restored from fumelie.eth in due time, those funds will be airdropped.
